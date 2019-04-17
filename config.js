@@ -34,7 +34,7 @@ module.exports = {
     // Install some other useful utilities like `sponge`
     'moreutils',
     'nmap',
-    'openconnect',
+    //'openconnect',
     'reattach-to-user-namespace',
     // better/more recent version of screen
     'homebrew/dupes/screen',
@@ -52,17 +52,18 @@ module.exports = {
     //'adium',
     //'amazon-cloud-drive',
     //'atom',
-    // 'box-sync',
+    //'box-sync',
     //'comicbooklover',
-    //'diffmerge',
+    'diffmerge',
     'docker', // docker for mac
-    //'dropbox',
+    'dropbox',
     //'evernote',
     'flux',
     'gpg-suite',
     //'ireadfast',
     'iterm2',
-    'little-snitch',
+    //'little-snitch',
+    'lulu',
     'macbreakz',
     'micro-snitch',
     'signal',
@@ -71,11 +72,12 @@ module.exports = {
     //'sketchup',
     'slack',
     'the-unarchiver',
+    'fantastical',
     //'torbrowser',
     //'transmission',
-    'visual-studio-code',
+    'visual-studio-code'
     //'vlc',
-    'xquartz'
+    //'xquartz'
   ],
   gem: [
   ],
