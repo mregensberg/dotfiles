@@ -54,6 +54,7 @@ module.exports = {
     //'atom',
     //'box-sync',
     //'comicbooklover',
+    'alfred',
     'diffmerge',
     'docker', // docker for mac
     'dropbox',
