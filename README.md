@@ -48,37 +48,9 @@ You don't need to install or configure anything upfront! This works with a brand
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Forget About Manual Configuration!
-
-Don't you hate getting a new laptop or joining a new team and then spending a whole day setting up your system preferences and tools? Me too. That's why we automate; we did it once and we don't want to do have to do it again.
-
-\\[^_^]/ - This started as [Adam Eivy](http://adameivy.com)'s MacOS shell configuration dotfiles but has grown to a multi-developer platform for machine configuration.
-
-When I finish with your machine, you will be able to look at your command-line in full-screen mode like this (running iTerm):
-
-![iTerm Screenshot](https://raw.githubusercontent.com/atomantic/dotfiles/master/img/term.png)
-
-Check out how your shell prompt includes the full path, node.js version & the working git branch along with a lot of other info!
-We use powerlevel9k for command prompt, so customization of what you want is easily changable in `./.zshrc`
-The top terminal is using vim as a full replacement IDE.
-The bottom left two are git terminals.
-The bottom right is running `vtop`
-
-To launch fullscreen, hit `Command + Enter` in iTerm, then use `Command + d` and `Command + D` to create split panes.
-
-
-\\[._.]/ - I'm so excited I just binaried in my pants!
-
-# Watch me run!
-![Running](http://media.giphy.com/media/5xtDarwenxEoFeIMEM0/giphy.gif)
-
 # Installation
 
-> Note: I recommend forking this repo in case you don't like anything I do and want to set your own preferences (and pull request them!)
-
-> REVIEW WHAT THIS SCRIPT DOES PRIOR TO RUNNING: https://github.com/atomantic/dotfiles/blob/master/install.sh#L275-L1038
-> It's always a good idea to review arbitrary code from the internet before running it on your machine with sudo power!
-> You are responsible for everything this script does to your machine (see LICENSE)
+Forked from https://github.com/atomantic/dotfiles
 
 ```bash
 git clone --recurse-submodules https://github.com/atomantic/dotfiles ~/.dotfiles
@@ -86,31 +58,15 @@ cd ~/.dotfiles;
 # run this using terminal (not iTerm, lest iTerm settings get discarded on exit)
 ./install.sh
 ```
-* When it finishes, open iTerm and press `Command + ,` to open preferences. Under Profiles > Colors, select "Load Presets" and choose the `Solarized Dark Patch` scheme. If it isn't there for some reason, import it from `~/.dotfiles/configs` -- you may also need to select the `Hack` font and check the box for non-ascii font and set to `Roboto Mono For Powerline` (I've had mixed results for automating these settings--love a pull request that improves this)
+* On completion, open iTerm and press `Command + ,` to open preferences. Under Profiles > Colors, select "Load Presets" and choose the `Solarized Dark Patch` scheme. If it isn't there for some reason, import it from `~/.dotfiles/configs` -- you may also need to select the `Hack` font and check the box for non-ascii font and set to `Roboto Mono For Powerline` (I've had mixed results for automating these settings--love a pull request that improves this)
 * I've also found that you need to reboot before fast key repeat will be enabled
 
-> Note: running install.sh is idempotent. You can run it again and again as you add new features or software to the scripts! I'll regularly add new configurations so keep an eye on this repo as it grows and optimizes.
 
 ## Restoring Dotfiles
 
 If you have existing dotfiles for configuring git, zsh, vim, etc, these will be backed-up into `~/.dotfiles_backup/$(date +"%Y.%m.%d.%H.%M.%S")` and replaced with the files from this project. You can restore your original dotfiles by using `./restore.sh $RESTOREDATE` where `$RESTOREDATE` is the date folder name you want to restore.
 
 > The restore script does not currently restore system settings--only your original dotfiles. To restore system settings, you'll need to manually undo what you don't like (so don't forget to fork, review, tweak)
-
-
-# 3.x.x+ Upgrade Instructions!
-
-`3.0.0` brings huge changes. If you have made any modifications (and didn't make your own fork), you will want to backup your dotfiles prior to running `git-up` or `git pull` on `~/.dotfiles`.
-
-Do the following to upgrade your ~/.dotfiles safely:
-
-1. backup your dotfiles: `cp -R ~/.dotfiles ~/.dotfiles_old`
-2. `cd ~/.dotfiles`
-3. update dotfiles: `git-up` or `git pull`
-4. remove old submodule location: `rm -rf .vim` (now lives in `homedir/.vim`)
-5. inspect `install.sh` and `config.js` to make sure all the software you want is installed
-6. inspect `homedir/*` for any changes you want to port from `./dotfiles_old`
-7. run `install.sh` again
 
 # Additional
 
@@ -119,8 +75,6 @@ I am moving away from using `Atom` and instead using `vim` as my IDE. I use Vund
 
 ## Crontab
 You can `cron ~/.crontab` if you want to add my nightly cron software updates.
-
-> \\[0_0]/ - Note that this may wake you in the morning to compatibility issues so use only if you like being on the edge
 
 ## Remap Caps-Lock
 - I highly recommend remapping your Caps Lock key to Control per [Dr. Bunsen](http://www.drbunsen.org/remapping-caps-lock/):
