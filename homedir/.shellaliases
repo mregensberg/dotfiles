@@ -105,3 +105,6 @@ alias k='kubectl'
 alias kp='kubectl get pods -o wide'
 alias kdp='kubectl describe pod'
 alias kdn='kubectl describe node'
+
+bindkey "[D" backward-word
+bindkey "[C" forward-word
