@@ -15,8 +15,6 @@ module.exports = {
     'fzf',
     'readline', // ensure gawk gets good readline
     'gawk',
-    // http://www.lcdf.org/gifsicle/ (because I'm a gif junky)
-    'gifsicle',
     'gnupg',
     // Install GNU `sed`, overwriting the built-in `sed`
     // so we can do "sed -i 's/foo/bar/' file" instead of "sed -i '' 's/foo/bar/' file"
@@ -44,7 +42,10 @@ module.exports = {
     'ttyrec',
     // better, more recent vim
     'vim --with-client-server --with-override-system-vi',
+    // periodic execution
     'watch',
+    // file watching
+    'watchman',
     // Install wget with IRI support
     'wget --enable-iri'
   ],
@@ -54,24 +55,26 @@ module.exports = {
     //'atom',
     //'box-sync',
     //'comicbooklover',
+    '1password',
     'alfred',
     'diffmerge',
     'docker', // docker for mac
     'dropbox',
     //'evernote',
-    'flux',
+    // 'flux',
     'gpg-suite',
+    'google-chrome',
     //'ireadfast',
     'iterm2',
     //'little-snitch',
     'lulu',
-    'macbreakz',
     'micro-snitch',
     'signal',
     //'macvim',
     'sizeup',
     //'sketchup',
     'slack',
+    'sourcetree',
     'the-unarchiver',
     'fantastical',
     //'torbrowser',

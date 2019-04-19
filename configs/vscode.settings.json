@@ -1,0 +1,20 @@
+{
+    "editor.tabSize": 2,
+    "editor.snippetSuggestions": "top",
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": true,
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.rulers": [80],
+    "emmet.includeLanguages": {
+        "html.erb": "html"
+    },
+    "files.associations": {
+        "html.erb": "html"
+    },
+    "terminal.integrated.fontFamily": "Hack",
+    "javascript.validate.enable": false,
+    "workbench.sideBar.location": "right",
+    "window.zoomLevel": 0,
+    "cSpell.allowCompoundWords": true
+}

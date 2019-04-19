@@ -438,11 +438,11 @@ sudo tmutil disablelocal;ok
 running "Stop iTunes from responding to the keyboard media keys"
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null;ok
 
-# running "Show icons for hard drives, servers, and removable media on the desktop"
-# defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-# defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-# defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-# defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true;ok
+running "Show icons for hard drives, servers, and removable media on the desktop"
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true;ok
 
 # running "Enable the MacBook Air SuperDrive on any Mac"
 # sudo nvram boot-args="mbasd=1";ok
@@ -878,6 +878,10 @@ bot "Spotlight"
 # running "Hide Spotlight tray-icon (and subsequent helper)"
 # sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search;ok
 
+running "Disable the Spotlight hotkey (to make available to Alfred)"
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c \
+  "Set AppleSymbolicHotKeys:64:enabled false";ok
+
 running "Disable Spotlight indexing for any volume that gets mounted and has not yet been indexed"
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes";ok
@@ -1027,6 +1031,13 @@ running "Disable continuous spell checking"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false;ok
 
 ###############################################################################
+bot "VS Code"
+###############################################################################
+
+running "Installing custom VSCode settings"
+cp ./configs/vscode.settings.json ~/Library/Application\ Support/Code/User/settings.json;ok
+
+###############################################################################
 bot "SizeUp.app"
 ###############################################################################
 
@@ -1051,4 +1062,4 @@ for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
 done
 
 
-bot "Woot! All done"
+bot "W00t! All done"

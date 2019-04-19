@@ -106,5 +106,8 @@ alias kp='kubectl get pods -o wide'
 alias kdp='kubectl describe pod'
 alias kdn='kubectl describe node'
 
+alias ngls="npm list -g --depth=0"
+alias W="cd ~/Work"
+
 bindkey "[D" backward-word
 bindkey "[C" forward-word
