@@ -84,6 +84,7 @@ module.exports = {
     //'xquartz'
   ],
   gem: [
+    'git-up'
   ],
   npm: [
     'antic',

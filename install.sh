@@ -244,6 +244,9 @@ fi
 #   ok
 # fi
 
+running "install RVM and update gems"
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+
 # node version manager
 require_brew nvm
 
