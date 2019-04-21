@@ -1,0 +1,3 @@
+1. Open selected apps to complete install
+2. Keyboard shortcut (remove command-space)
+
