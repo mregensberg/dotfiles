@@ -79,7 +79,8 @@ module.exports = {
     'fantastical',
     //'torbrowser',
     //'transmission',
-    'visual-studio-code'
+    'visual-studio-code',
+    'viscosity'
     //'vlc',
     //'xquartz'
   ],

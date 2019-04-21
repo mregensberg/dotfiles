@@ -589,6 +589,10 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 bot "VS Code"
 ###############################################################################
 
+running "Opening VSCode for first use"
+open /Applications/Visual\ Studio\ Code.app
+sleep 10;ok
+
 running "Installing custom VSCode settings"
 cp ./configs/vscode.settings.json ~/Library/Application\ Support/Code/User/settings.json;ok
 
