@@ -6,9 +6,13 @@ alias g=git
 
 #############################
 # Utilities
+alias lzd="lazydocker"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# terraform
+alias tf="terraform"
 
 # buzzphrase commit
 # used for my presentation decks when I have nothing to say about the commit

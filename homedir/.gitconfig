@@ -1,9 +1,9 @@
 [user]
-  name = GITHUBFULLNAME
-  email = GITHUBEMAIL
+  name = Mark Regensberg
+  email = mregensberg@utilitywarehouse.co.uk
 [github]
   # https://github.com/blog/180-local-github-config
-  user = GITHUBUSER
+  user = mregensberg
 [color]
 # ui = true is a superset of all the more specific color options
 #  as documented at http://book.git-scm.com/5_customizing_git.html
@@ -37,7 +37,7 @@
   fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/markr/.gitignore
   quotepath = false
   # line endings
   # force LF during add
@@ -182,7 +182,7 @@
 
 [credential]
     # cache creds (git help credential-cache)
-  helper = cache
+	helper = store
 
 [filter "tabspace"]
   clean = expand -t 4
@@ -200,3 +200,19 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[filter "strongbox"]
+	clean = strongbox -clean %f
+	smudge = strongbox -smudge %f
+	required = true
+[diff "strongbox"]
+	textconv = strongbox -diff
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+[url "https://github.com"]
+	insteadOf = git://github.com

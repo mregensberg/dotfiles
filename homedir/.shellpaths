@@ -8,9 +8,14 @@ export PATH=/usr/local/bin:$PATH
 
 # GO
 #export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$HOME/go/bin/
+export GOPATH=$HOME/go
 
 # The next line updates PATH for the Google Cloud SDK.
 #source "/Users/$(whoami)/Downloads/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables shell command completion for gcloud.
 #source "/Users/$(whoami)/Downloads/google-cloud-sdk/completion.zsh.inc"
+
+# Postgres.app
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
